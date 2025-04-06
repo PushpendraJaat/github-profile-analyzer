@@ -1,54 +1,98 @@
-# React + TypeScript + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🔍 GitHub Profile Analyzer
 
-Currently, two official plugins are available:
+Analyze any GitHub user's activity in style!  
+A sleek and interactive web app built with **React**, **TypeScript**, **shadcn/ui**, and powered by **Bun**. 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 🔎 **GitHub User Search** – Enter any GitHub username to explore their profile.
+- 📦 **Repository Insights** – View a list of public repositories with stars, forks, language stats & more.
+- 📈 **Commit Activity Visualization** – See contribution trends over time with beautiful, interactive charts.
+- ⚡ **Fast & Modern Stack** – Built with Vite, styled using Tailwind & shadcn components, and powered by Bun for blazing fast dev experience.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## ⚙️ Tech Stack
+
+| Tech           | Role                              |
+|----------------|-----------------------------------|
+| ⚛️ React        | UI framework                      |
+| 🟦 TypeScript   | Type-safe development             |
+| 🌈 shadcn/ui    | Beautiful, accessible components |
+| 💨 Tailwind CSS | Utility-first styling             |
+| 🍞 Bun          | Package manager & dev server     |
+| ⚡ Vite         | Super fast build tool             |
+
+---
+
+## 🛠️ Installation
+
+> **Note**: Make sure you have **[Bun](https://bun.sh)** installed first.  
+> Run: `bun --version` to confirm.
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/PushpendraJaat/github-profile-analyzer.git
+   cd github-profile-analyzer
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   bun install
+   ```
+
+3. **Run the dev server**
+
+   ```bash
+   bun run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser 🚀
+
+---
+
+## 🧭 Project Structure
+
+```
+├── public/               # Static assets
+├── src/
+│   ├── components/       # Reusable UI components (shadcn)
+│   ├── App.tsx           # Main app component
+│   ├── main.tsx          # Entry point
+├── vite.config.ts        # Vite configuration
+├── tsconfig.json         # TypeScript settings
+├── bun.lockb             # Bun lockfile
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 How It Works
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. You enter a GitHub username.
+2. The app fetches:
+   - Profile info (name, bio, avatar, followers etc.)
+   - All public repositories
+   - Commit history from each repo
+3. It processes the data and visualizes it through charts for easy analysis.
+
+---
+
+## 🧑‍💻 Contributing
+
+Got ideas or improvements? PRs are welcome!  
+Feel free to fork the repo, make your changes, and submit a pull request 🙌
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).  
+Free to use, modify, and distribute. 💖
+
+---
